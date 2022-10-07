@@ -1,0 +1,62 @@
+* {
+	font-family: 'Raptors', sans-serif;                                        
+}
+body {
+	background-color: #e76f51;
+	text-align: center;
+	height: 100%;
+}
+.header {
+	display: block;
+	height: 134px;
+	width: 100%;
+	text-align: center;
+	background-color: #f4a261;
+	border-radius: 40px;
+	border: 2px solid;
+}
+nav {
+	display: inline-block;
+	width: 23%;
+	margin-top: 49px;
+}
+button {
+	border: none;
+	background-color: #f4a261;
+	font-size:30px;
+	color:#2a9d8f;
+}
+.jugar {
+	-webkit-text-stroke: 0.5px black;
+  	color: #e9c46a;
+}
+.img2 {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+}
+#tablero {
+	display: grid;
+	grid-template-columns: repeat(10, 50px);
+	grid-template-rows: repeat(10,50px);
+}
+#tablero div {
+	border-radius: 4px;
+	background-color: #264653;
+	border-left: 2px solid black;
+	border-right: 2px solid grey;
+	border-top: 2px solid black;
+	border-bottom: 2px solid grey;
+}
+.pie {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	margin-bottom: 50px;
+}
+.img1 {
+	text-align: center;
+	width: 24.5%;
+	display: inline-block;
+	margin-top: 50px;
+}
