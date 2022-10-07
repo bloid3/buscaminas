@@ -36,9 +36,12 @@ button {
 	width: 30px;
 }
 #tablero {
+	position: absolute;
 	display: grid;
 	grid-template-columns: repeat(10, 50px);
 	grid-template-rows: repeat(10,50px);
+	left: 36.5%;
+	bottom: 23%;
 }
 #tablero div {
 	border-radius: 4px;
@@ -52,7 +55,7 @@ button {
 	position: fixed;
 	width: 100%;
 	bottom: 0;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 .img1 {
 	text-align: center;
