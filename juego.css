@@ -1,5 +1,5 @@
 * {
-	font-family: 'Raptors', sans-serif;                                        
+	font-family: 'Air', sans-serif;
 }
 body {
 	background-color: #e76f51;
@@ -25,10 +25,6 @@ button {
 	background-color: #f4a261;
 	font-size:30px;
 	color:#2a9d8f;
-}
-.jugar {
-	-webkit-text-stroke: 0.5px black;
-  	color: #e9c46a;
 }
 .img2 {
 	display: inline-block;
