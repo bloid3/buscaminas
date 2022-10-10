@@ -25,6 +25,7 @@ button {
 	background-color: #f4a261;
 	font-size:30px;
 	color:#2a9d8f;
+	text-shadow:1px 1px 1px;
 }
 .img2 {
 	display: inline-block;
@@ -58,4 +59,7 @@ button {
 	width: 24.5%;
 	display: inline-block;
 	margin-top: 50px;
+}
+button:hover {
+	color: #264653;
 }
