@@ -3,7 +3,6 @@
 }
 body {
 	background-color: #e76f51;
-	text-align: center;
 	height: 100%;
 }
 .header {
@@ -37,7 +36,7 @@ button {
 	display: grid;
 	grid-template-columns: repeat(10, 50px);
 	grid-template-rows: repeat(10,50px);
-	left: 34.5%;
+	left: 35%;
 	top: 20%;
 }
 #tablero div {
