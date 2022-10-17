@@ -19,7 +19,7 @@ function pintarTab(numC, numF) {
 function generarCampoMinas(numC, numF) {
 	campoMinas = new Array(numF)
 	for (let fila = 0; fila < numF; fila++) {
-		campoMinas[f] = new Array(numC)
+		campoMinas[fila] = new Array(numC)
 	}
 }
 function esparcirMinas(numC, numF, minasTotales) {
@@ -32,5 +32,6 @@ function esparcirMinas(numC, numF, minasTotales) {
 			campoMinas[fila][columna] == "B"
 		}
 		minasColocadas++;
+		console.log(campoMinas)
 	}
 }
