@@ -4,6 +4,7 @@ const buscaminas = new Map ([
 	["minasTotales",50]
 ]);
 let minasColocadas = 0
+
 function pintarTab() {
 	if (!document.getElementById("idCelda_1_1")) {
 		let tablero = document.querySelector("#tablero")
@@ -16,12 +17,14 @@ function pintarTab() {
 		}
 	}
 }
+
 function generarCampoMinas() {
 	campominas = new Array(buscaminas.get("filas"))
 	for (let fila = 0; fila < buscaminas.get("filas"); fila++) {
 		campominas[fila] = new Array(buscaminas.get("columnas"))
 	}
 }
+
 function esparcirMinas() {
 	while (minasColocadas < buscaminas.get("minasTotales")) {
 		let fila = Math.floor(Math.random() * (buscaminas.get("filas")))
@@ -35,8 +38,19 @@ function esparcirMinas() {
 	}
 	console.log(campominas)
 }
-function prueba() {
+
+function botonaso() {
 	pintarTab()
 	generarCampoMinas()
 	esparcirMinas()
+}
+
+function descubrirMinas() {
+	for (let f = 0; f < buscaminas.get("filas");f++) {
+		for (let c = 0; c < buscaminas.get("columnas");c++) {
+			if (campominas[f][c] != "1") {
+				
+			}
+		}
+	}
 }
