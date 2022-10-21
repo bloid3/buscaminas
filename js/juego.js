@@ -7,12 +7,14 @@ buscaminas.set("Minas", 50)
 
 
 function pintarTab(numC, numF) {
-	let tablero = document.querySelector("#tablero")
-	for (let f = 1; f <= numF; f++) {
-		for (let c = 1; c <= numC; c++) {
-			let nuevoDiv = document.createElement("div")
-			nuevoDiv.setAttribute("id","idCelda_" + f + "_" + c)
-			tablero.appendChild(nuevoDiv)
+	if (!document.getElementById("idCelda_1_1")) {
+		let tablero = document.querySelector("#tablero")
+		for (let f = 1; f <= numF; f++) {
+			for (let c = 1; c <= numC; c++) {
+				let nuevoDiv = document.createElement("div")
+				nuevoDiv.setAttribute("id","idCelda_" + f + "_" + c)
+				tablero.appendChild(nuevoDiv)
+			}
 		}
 	}
 }

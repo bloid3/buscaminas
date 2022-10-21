@@ -17,6 +17,18 @@ body {
 main {
 	height: 700px;
 }
+.container {
+	position: relative;
+	height: 100%;
+}
+.container img {
+	position: absolute;
+	height: 98%;
+	margin-top: 1%;
+	left:21%;
+	border: 3px solid #264653;
+	border-radius: 15px;
+}
 nav {
 	display: inline-block;
 	width: 23%;
@@ -33,21 +45,6 @@ button {
 	display: inline-block;
 	height: 30px;
 	width: 30px;
-}
-#tablero {
-	display: grid;
-	grid-template-columns: repeat(10, 50px);
-	grid-template-rows: repeat(10,50px);
-	margin-top: 80px;
-	place-content: center;
-}
-#tablero div {
-	border-radius: 4px;
-	background-color: #264653;
-	border-left: 2px solid black;
-	border-right: 2px solid grey;
-	border-top: 2px solid black;
-	border-bottom: 2px solid grey;
 }
 .pie {
 	position: fixed;
