@@ -1,10 +1,9 @@
-const buscaminas = {
-	filas:10,
-	columnas:10,
-	minas:(filas*columnas/2),
+let buscaminas = {
+	filas: 10,
+	columnas: 10,
+	minas: (filas*columnas/2),
 	campoMinas:[]
 }
-
 function pintarTab() {
 	if (!document.getElementById("idCelda_1_1")) {
 		let tablero = document.querySelector("#tablero")
@@ -22,7 +21,7 @@ function generarCampoMinas() {
 		campoMinas[fila] = new Array(buscaminas.columnas)
 	}
 }
-function esparcirMinas(numC, numF, minasTotales) {
+function esparcirMinas() {
 	let minasColocadas = 0
 	while (minasColocadas < minasTotales) {
 		let fila = Math.floor(Math.random() * (numF))
@@ -38,7 +37,7 @@ function esparcirMinas(numC, numF, minasTotales) {
 	
 }
 function prueba() {
-	pintarTab(10,10)
-	generarCampoMinas(10,10)
-	esparcirMinas(10,10,50)
+	pintarTab()
+	generarCampoMinas()
+	esparcirMinas()
 }
