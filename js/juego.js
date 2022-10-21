@@ -31,9 +31,9 @@ function esparcirMinas(numC, numF, minasTotales) {
 		let columna = Math.floor(Math.random() * numC)
 
 		if (campoMinas[fila][columna] != "B") {
-			campoMinas[fila][columna] == "B"
+			campoMinas[fila][columna] = "B"
 		}
 		minasColocadas++;
-		console.log(campoMinas)
 	}
+	console.log(campoMinas)
 }

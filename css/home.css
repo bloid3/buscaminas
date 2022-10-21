@@ -24,7 +24,7 @@ main {
 .container img {
 	position: absolute;
 	height: 98%;
-	margin-top: 1%;
+	margin-top: 0.7%;
 	left:21%;
 	border: 3px solid #264653;
 	border-radius: 15px;
