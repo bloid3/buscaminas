@@ -63,7 +63,6 @@ button {
 }
 
 .play {
-  align-items: center;
   background-color: #2a9d8f;
   border: 2px solid #111;
   border-radius: 8px;
@@ -72,13 +71,10 @@ button {
   cursor: pointer;
   font-size: 16px;
   height: 48px;
-  justify-content: center;
   line-height: 24px;
   max-width: 100%;
   padding: 0 25px;
   position: relative;
-  text-align: center;
-  text-decoration: none;
   user-select: none;
   touch-action: manipulation;
   left: 46.5%;
