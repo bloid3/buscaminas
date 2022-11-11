@@ -49,6 +49,15 @@ button {
 	border-top: 2px solid black;
 	border-bottom: 2px solid grey;
 }
+div[id^=idCelda] {
+	font-family: 'SF Electrotome', sans-serif;
+	font-family: 'SF Electrotome Condensed', sans-serif;
+	font-family: 'SF Electrotome Shaded', sans-serif;
+	padding-top: 3px;
+	text-align: center;
+	color: #264653;
+	font-size: 35px;
+}
 .pie {
 	position: fixed;
 	width: 100%;
