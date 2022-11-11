@@ -90,13 +90,3 @@ function ponerBandera(event) {
 	}
 }
 
-
-/*function descubrirMinas() {
-	for (let f = 0; f < buscaminas.get("filas");f++) {
-		for (let c = 0; c < buscaminas.get("columnas");c++) {
-			if (campominas[f][c] != "1") {
-				
-			}
-		}
-	}
-}*/
