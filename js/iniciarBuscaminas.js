@@ -61,6 +61,7 @@ function mostrarCoordenadas(event) {
 	let y = coordenadas[2]
 	if (campominas[x-1][y-1] == 1) {
 		event.target.innerHTML = "💣"
+		event.target.style.background = "#e76f51"
 	} else {
 		event.target.innerHTML = calcularMinas(x-1,y-1)
 		event.target.style.background = "#e76f51"
