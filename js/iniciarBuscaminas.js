@@ -1,8 +1,9 @@
 const buscaminas = new Map([
 	["FILAS", 10],
 	["COLUMNAS", 10],
-	["NUM_BOMBAS", 50]
+	["NUM_BOMBAS", 16]
 ]);
+
 
 function jugar() {
 	generarTableroJS()
