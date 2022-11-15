@@ -36,9 +36,9 @@ button {
 }
 #tablero {
 	display: grid;
-	grid-template-columns: repeat(10, 50px);
-	grid-template-rows: repeat(10,50px);
-	margin-top: 80px;
+	grid-template-columns: repeat(10, 60px);
+	grid-template-rows: repeat(10,60px);
+	margin-top: 60px;
 	place-content: center;
 }
 #tablero div {
@@ -55,6 +55,7 @@ div[id^=idCelda] {
 	font-family: 'SF Electrotome Shaded', sans-serif;
 	padding-top: 3px;
 	text-align: center;
+	justify-content: 0 auto;
 	color: #264653;
 	font-size: 35px;
 }
