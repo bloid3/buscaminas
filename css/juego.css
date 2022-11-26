@@ -49,6 +49,9 @@ button {
 	border-top: 2px solid black;
 	border-bottom: 2px solid grey;
 }
+#tablero div:hover {
+	background-color:antiquewhite;
+}
 div[id^=idCelda] {
 	font-family: 'SF Electrotome', sans-serif;
 	font-family: 'SF Electrotome Condensed', sans-serif;

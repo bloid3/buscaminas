@@ -86,7 +86,6 @@ function ponerBandera(event) {
 	event.preventDefault()
 	if (event.target.innerHTML == "") {
 		event.target.innerHTML = "🚩"
-		console.log("🚩")
 	} else if (event.target.innerHTML == "🚩"){
 		event.target.innerHTML = ""
 	}
