@@ -64,8 +64,12 @@ function mostrarCoordenadas(event) {
 		event.target.innerHTML = "💣"
 		event.target.style.background = "#e76f51"
 	} else {
-		event.target.innerHTML = calcularMinas(x-1,y-1)
-		event.target.style.background = "#e76f51"
+		if (calcularMinas(x-1,y-1) == 0) {
+			funcionRecursiva(x-1, y-1)
+		}else {
+			event.target.innerHTML = calcularMinas(x-1,y-1)
+			event.target.style.background = "#e76f51"
+		}
 	}
 }
 function calcularMinas(fila, columna) {
@@ -88,6 +92,19 @@ function ponerBandera(event) {
 		event.target.innerHTML = "🚩"
 	} else if (event.target.innerHTML == "🚩"){
 		event.target.innerHTML = ""
+	}
+}
+
+function funcionRecursiva(x, y) {
+	for (let f = x-1; f <= x+1; x++) {
+		for (let c = y-1; c <= y+1; c++) {
+			if (calcularMinas(f,c) == 0) {
+				funcionRecursiva(f,c)
+			} else {
+				document.getElementById(`idCelda_${f+1}_${c+1}`).setAttribute("style","background-color:#e76f51")
+				document.getElementById(`idCelda_${f+1}_${c+1}`).innerHTML = calcularMinas(f, c)
+			}
+		}
 	}
 }
 
