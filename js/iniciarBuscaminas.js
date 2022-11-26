@@ -63,14 +63,15 @@ function mostrarCoordenadas(event) {
 	if (campominas[x-1][y-1] == 1) {
 		event.target.innerHTML = "💣"
 		event.target.style.background = "#e76f51"
+	} else if (calcularMinas(x-1,y-1) == 0) {
+		event.target.innerHTML = " "
+		event.target.style.background = "#e76f51"
+		funcionRecursiva(x-1, y-1)
 	} else {
-		if (calcularMinas(x-1,y-1) == 0) {
-			funcionRecursiva(x-1, y-1)
-		}else {
-			event.target.innerHTML = calcularMinas(x-1,y-1)
-			event.target.style.background = "#e76f51"
-		}
+		event.target.innerHTML = calcularMinas(x-1,y-1)
+		event.target.style.background = "#e76f51"
 	}
+	
 }
 function calcularMinas(fila, columna) {
 	let numMinas = 0;
@@ -98,11 +99,11 @@ function ponerBandera(event) {
 function funcionRecursiva(x, y) {
 	for (let f = x-1; f <= x+1; x++) {
 		for (let c = y-1; c <= y+1; c++) {
-			if (calcularMinas(f,c) == 0) {
-				funcionRecursiva(f,c)
-			} else {
+			if (calcularMinas(f,c) != 0) {
 				document.getElementById(`idCelda_${f+1}_${c+1}`).setAttribute("style","background-color:#e76f51")
 				document.getElementById(`idCelda_${f+1}_${c+1}`).innerHTML = calcularMinas(f, c)
+			} else {
+				funcionRecursiva(f,c)
 			}
 		}
 	}
