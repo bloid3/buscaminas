@@ -96,23 +96,31 @@ function ponerBandera(event) {
 }
 
 function liberarRecursivo(x, y) {
-	let celda = document.querySelector("#idCelda_" + x + "_" + y)
-	if (calcularMinas(x - 1,y - 1) == 0 && !tablero_recursivo.includes(celda)) {
-		celda.innerHTML = " "
-		celda.style.background = "#e76f51"
-		tablero_recursivo.push(celda)
-		for (let f = x - 1; f <= x + 1; f++) {
-			for (let c = y - 1;c <= y + 1; c++) {
-				if ((f>= 1 && f<=10) && (c>=1 && c<=10)) 
-					liberarRecursivo(f, c)
+	let fila = parseInt(x)
+	let columna = parseInt(y)
+	let celda = document.getElementById("idCelda_"+fila+"_"+columna)
+	if (celda.innerHTML == "") {
+		if (calcularMinas(fila-1,columna-1) == 0) {
+			celda.innerHTML = " "
+			celda.style.background = "#e76f51"
+			tablero_recursivo.push([fila-1,columna-1])
+		} else {
+			celda.innerHTML = calcularMinas(fila-1,columna-1)
+			celda.style.background = "#e76f51"
+		}
+	} if (calcularMinas(fila-1,columna-1) == 0) {
+		for (let f = fila-1; f <= fila+1; f++) {
+			for (let c = columna-1;c <= columna+1; c++) {
+				if ((f>= 1 && f<=10) && (c>=1 && c<=10)) {
+					if (document.getElementById("idCelda_"+f+"_"+c).innerHTML == "") {
+						liberarRecursivo(f, c)
+						}
+					}
+				}
 			}
 		}
-	} else if (calcularMinas(x-1,y-1) != 0 && !tablero_recursivo.includes(celda)) {
-		celda.innerHTML = calcularMinas(x-1,y-1)
-		celda.style.background = "#e76f51"
-		tablero_recursivo.push(celda)
 	}
-}
+
 
 
 	 
