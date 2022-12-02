@@ -3,7 +3,7 @@ const buscaminas = new Map([
 	["COLUMNAS", 10],
 	["NUM_BOMBAS", 16]
 ]);
-
+let primerClick = true
 let tablero_recursivo = []
 
 function jugar() {
@@ -66,7 +66,7 @@ function mostrarCoordenadas(event) {
 	} else if (calcularMinas(x-1,y-1) == 0) {
 		event.target.innerHTML = " "
 		event.target.style.background = "#e76f51"
-		liberarRecursivo(x-1, y-1)
+		liberarRecursivo(x, y)
 	} else {
 		event.target.innerHTML = calcularMinas(x-1,y-1)
 		event.target.style.background = "#e76f51"
@@ -96,23 +96,26 @@ function ponerBandera(event) {
 	}
 }
 
-function liberarRecursivo(x,y){
-	let cercanos = [[x,y-1],[x-1,y],[x,y+1],[x+1,y]]
-	if (campominas[x][y] == 0) {
-		for (let i = 0; i < cercanos.length; i++) {
-			if(cercanos[i][0]>=0 && cercanos[i][1]>=0){
-				if(cercanos[i][0]<buscaminas.get("FILAS") && cercanos[i][1]<buscaminas.get("COLUMNAS")){
-					if(tablero[cercanos[i][0]][cercanos[i][1]] == 0 && tablero_recursivo[cercanos[i][0]][cercanos[i][1]] == 0){                                
-						document.getElementById(`idCelda_${cercanos[i][0]}_${cercanos[i][1]}`).setAttribute("style")
-						tablero_recursivo[cercanos[i][0]][cercanos[i][1]]="v"
-						liberarRecursivo(cercanos[i][0] , cercanos[i][1] )
-
-					}    
+function liberarRecursivo(x, y) {
+	let celda = document.querySelector("#idCelda_" + x + "_" + y)
+	if (calcularMinas(x,y) == 0 && !tablero_recursivo.includes(celda)) {
+		celda.innerHTML = " "
+		celda.style.background = "#e76f51"
+		tablero_recursivo.push(celda)
+		for (let f = x; f <= x; f++) {
+			for (let c = y;c <= y; c++) {
+				if ((f>= 0 && f<=9) && (c>=0 && c<=9)) {
+					liberarRecursivo(f, c)
 				}
 			}
 		}
+	} else if (calcularMinas(x,y) != 0 && !tablero_recursivo.includes(celda)) {
+		celda.innerHTML = calcularMinas(x,y)
+		celda.style.background = "#e76f51"
+		tablero_recursivo.push(celda)
 	}
 }
+
 
 	 
 

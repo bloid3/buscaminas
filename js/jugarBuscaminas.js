@@ -1,1 +1,0 @@
-//Aqui movere la funcion de contar minas, pero no todavia :D

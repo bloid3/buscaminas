@@ -86,12 +86,11 @@ div[id^=idCelda] {
   height: 48px;
   line-height: 24px;
   max-width: 100%;
-  padding: 0 25px;
   position: relative;
   user-select: none;
   touch-action: manipulation;
   left: 46.5%;
-  top: 5.5%;
+  top: 4%;
 }
 
 .play:after {
