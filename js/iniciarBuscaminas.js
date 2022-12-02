@@ -1,8 +1,10 @@
 const buscaminas = new Map([
 	["FILAS", 10],
 	["COLUMNAS", 10],
-	["NUM_BOMBAS", 50]
+	["NUM_BOMBAS", 16]
 ]);
+let primerClick = true
+let tablero_recursivo = []
 
 function jugar() {
 	generarTableroJS()
@@ -33,7 +35,6 @@ function colocarBombasTableroJS() {
 			minasColocadas++;
 		}
 	}
-	console.log(campominas)
 }
 
 function dibujarTableroHTML() {
@@ -62,10 +63,15 @@ function mostrarCoordenadas(event) {
 	if (campominas[x-1][y-1] == 1) {
 		event.target.innerHTML = "💣"
 		event.target.style.background = "#e76f51"
+	} else if (calcularMinas(x-1,y-1) == 0) {
+		event.target.innerHTML = " "
+		event.target.style.background = "#e76f51"
+		liberarRecursivo(x, y)
 	} else {
 		event.target.innerHTML = calcularMinas(x-1,y-1)
 		event.target.style.background = "#e76f51"
 	}
+	
 }
 function calcularMinas(fila, columna) {
 	let numMinas = 0;
@@ -85,9 +91,31 @@ function ponerBandera(event) {
 	event.preventDefault()
 	if (event.target.innerHTML == "") {
 		event.target.innerHTML = "🚩"
-		console.log("🚩")
 	} else if (event.target.innerHTML == "🚩"){
 		event.target.innerHTML = ""
 	}
 }
+
+function liberarRecursivo(x, y) {
+	let celda = document.querySelector("#idCelda_" + x + "_" + y)
+	if (calcularMinas(x,y) == 0 && !tablero_recursivo.includes(celda)) {
+		celda.innerHTML = " "
+		celda.style.background = "#e76f51"
+		tablero_recursivo.push(celda)
+		for (let f = x; f <= x; f++) {
+			for (let c = y;c <= y; c++) {
+				if ((f>= 0 && f<=9) && (c>=0 && c<=9)) {
+					liberarRecursivo(f, c)
+				}
+			}
+		}
+	} else if (calcularMinas(x,y) != 0 && !tablero_recursivo.includes(celda)) {
+		celda.innerHTML = calcularMinas(x,y)
+		celda.style.background = "#e76f51"
+		tablero_recursivo.push(celda)
+	}
+}
+
+
+	 
 
