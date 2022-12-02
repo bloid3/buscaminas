@@ -3,7 +3,6 @@ const buscaminas = new Map([
 	["COLUMNAS", 10],
 	["NUM_BOMBAS", 16]
 ]);
-let primerClick = true
 let tablero_recursivo = []
 
 function jugar() {
@@ -98,19 +97,18 @@ function ponerBandera(event) {
 
 function liberarRecursivo(x, y) {
 	let celda = document.querySelector("#idCelda_" + x + "_" + y)
-	if (calcularMinas(x,y) == 0 && !tablero_recursivo.includes(celda)) {
+	if (calcularMinas(x - 1,y - 1) == 0 && !tablero_recursivo.includes(celda)) {
 		celda.innerHTML = " "
 		celda.style.background = "#e76f51"
 		tablero_recursivo.push(celda)
-		for (let f = x; f <= x; f++) {
-			for (let c = y;c <= y; c++) {
-				if ((f>= 0 && f<=9) && (c>=0 && c<=9)) {
+		for (let f = x - 1; f <= x + 1; f++) {
+			for (let c = y - 1;c <= y + 1; c++) {
+				if ((f>= 1 && f<=10) && (c>=1 && c<=10)) 
 					liberarRecursivo(f, c)
-				}
 			}
 		}
-	} else if (calcularMinas(x,y) != 0 && !tablero_recursivo.includes(celda)) {
-		celda.innerHTML = calcularMinas(x,y)
+	} else if (calcularMinas(x-1,y-1) != 0 && !tablero_recursivo.includes(celda)) {
+		celda.innerHTML = calcularMinas(x-1,y-1)
 		celda.style.background = "#e76f51"
 		tablero_recursivo.push(celda)
 	}
