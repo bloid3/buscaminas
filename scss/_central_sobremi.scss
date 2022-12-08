@@ -1,0 +1,79 @@
+@import "colors";
+
+button:hover {
+	color: map-get($misColores, 'azuloscuro');
+}
+.img2 {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+}
+.afotodatos {
+	height: 166px;
+	width: 100%;
+	background-color: map-get($misColores, 'amarillo');
+	border-radius: 67px;
+	margin-top: 15px;
+	border: 2px solid ;
+}
+.foto {
+	position: relative;
+	width: 50%;
+	text-align: center;
+	float: left;
+	margin-top: 51px;
+	font-size:62px;
+	color:map-get($misColores, 'azulclaro');
+}
+.datos {
+	position: relative;
+	width: 50%;
+	text-align: center;
+	float: right;
+	margin-top: 51px;
+	font-size: 62px;
+	color:map-get($misColores, 'azulclaro');
+}
+.acv {
+	display: inline-block;
+	background-color: map-get($misColores, 'amarillo');
+	height: 580px;
+	margin-top: 15px;
+	width: 49%;
+	border-radius: 40px;
+	border: 2px solid;
+	position: relative;
+}
+.scv {
+	position: absolute;
+	height: 100%;
+	width: 95%;
+	text-align: center;
+	font-size: 54px;
+	padding-top: 7%;
+	padding-left: 3%;
+	padding-right: 5%;
+}
+.lado {
+	display: inline-block;
+	height: 580px;
+	width: 49%;
+	margin-left: 23px;
+}
+.aficiones {
+	background-color: map-get($misColores, 'amarillo');
+	height: 270px;
+	width: 100%;
+	border-radius: 40px;
+	border: 2px solid;
+
+}
+.porfolio {
+	background-color: map-get($misColores, 'amarillo');
+	height: 270px;
+	width: 100%;	
+	border-radius: 40px;
+	margin-top: 29px;
+	border: 2px solid;
+
+}

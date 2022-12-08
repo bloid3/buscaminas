@@ -1,0 +1,11 @@
+@import "colors";
+* {
+	font-family: 'Air', sans-serif;
+}
+body {
+	background-color: map-get($misColores, 'naranjaoscuro');
+	height: 100%;
+}
+main {
+	height: 700px;
+}

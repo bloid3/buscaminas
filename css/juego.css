@@ -1,78 +1,76 @@
 * {
-	font-family: 'Air', sans-serif;
+  font-family: "Air", sans-serif;
 }
+
 body {
-	background-color: #e76f51;
-	height: 100%;
+  background-color: #e76f51;
+  height: 100%;
 }
-.header {
-	display: block;
-	height: 134px;
-	width: 100%;
-	text-align: center;
-	background-color: #f4a261;
-	border-radius: 40px;
-	border: 2px solid #264653;
-}
+
 main {
-	height: 700px;
+  height: 700px;
 }
+
+.header {
+  display: block;
+  height: 134px;
+  width: 100%;
+  text-align: center;
+  background-color: #f4a261;
+  border-radius: 40px;
+  border: 2px solid #264653;
+}
+
 nav {
-	display: inline-block;
-	width: 23%;
-	margin-top: 43px;
+  display: inline-block;
+  width: 23%;
+  margin-top: 43px;
 }
+
 button {
-	border: none;
-	background-color: #f4a261;
-	font-size:30px;
-	color:#2a9d8f;
-	text-shadow:1px 1px 1px;
+  border: none;
+  background-color: #f4a261;
+  font-size: 30px;
+  color: #2a9d8f;
+  text-shadow: 1px 1px 1px;
 }
+
 .img2 {
-	display: inline-block;
-	height: 30px;
-	width: 30px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
 }
+
 #tablero {
-	display: grid;
-	grid-template-columns: repeat(10, 60px);
-	grid-template-rows: repeat(10,60px);
-	margin-top: 60px;
-	place-content: center;
+  display: grid;
+  grid-template-columns: repeat(10, 60px);
+  grid-template-rows: repeat(10, 60px);
+  margin-top: 60px;
+  place-content: center;
 }
+
 #tablero div {
-	border-radius: 4px;
-	background-color: #264653;
-	border-left: 2px solid black;
-	border-right: 2px solid grey;
-	border-top: 2px solid black;
-	border-bottom: 2px solid grey;
+  border-radius: 4px;
+  background-color: #264653;
+  border-left: 2px solid black;
+  border-right: 2px solid grey;
+  border-top: 2px solid black;
+  border-bottom: 2px solid grey;
 }
+
 #tablero div:hover {
-	background-color:antiquewhite;
+  background-color: antiquewhite;
 }
+
 div[id^=idCelda] {
-	font-family: 'SF Electrotome', sans-serif;
-	font-family: 'SF Electrotome Condensed', sans-serif;
-	font-family: 'SF Electrotome Shaded', sans-serif;
-	padding-top: 3px;
-	text-align: center;
-	justify-content: 0 auto;
-	color: #264653;
-	font-size: 35px;
-}
-.pie {
-	position: fixed;
-	width: 100%;
-	bottom: 0;
-	margin-bottom: 30px;
-}
-.img1 {
-	text-align: center;
-	width: 24.5%;
-	display: inline-block;
-	margin-top: 50px;
+  font-family: "SF Electrotome", sans-serif;
+  font-family: "SF Electrotome Condensed", sans-serif;
+  font-family: "SF Electrotome Shaded", sans-serif;
+  padding-top: 3px;
+  text-align: center;
+  justify-content: 0 auto;
+  color: #264653;
+  font-size: 35px;
 }
 
 .play {
@@ -104,11 +102,12 @@ div[id^=idCelda] {
   position: absolute;
   top: -2px;
   transform: translate(8px, 8px);
-  transition: transform .2s ease-out;
+  transition: transform 0.2s ease-out;
   z-index: -1;
 }
+
 button:hover {
-	color: #264653;
+  color: #264653;
 }
 
 .play:hover:after {
@@ -129,3 +128,18 @@ button:hover {
     padding: 0 40px;
   }
 }
+.pie {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: 30px;
+}
+
+.img1 {
+  text-align: center;
+  width: 24.5%;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+/*# sourceMappingURL=juego.css.map */
