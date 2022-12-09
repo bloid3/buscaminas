@@ -5,6 +5,8 @@ const buscaminas = new Map([
 ]);
 let tablero_recursivo = []
 
+
+//Funcion principal
 function jugar() {
 	generarTableroJS()
 	dibujarTableroHTML()
@@ -12,6 +14,8 @@ function jugar() {
 	asociarEventClick()
 }
 
+
+//Generamos un array para saber donde están las minas
 function generarTableroJS() {
 	campominas = new Array(buscaminas.get("FILAS"))
 	for (let fila = 0; fila < buscaminas.get("FILAS"); fila++) {
@@ -19,11 +23,15 @@ function generarTableroJS() {
 	}
 }
 
+
+//Funcion para generar un número aleatorio
 function numeroAleatorio(num) {
 	return Math.floor(Math.random() * num)
 }
 
 let minasColocadas = 0
+
+//Colocamos las minas pertinentes accediendo al mapa
 function colocarBombasTableroJS() {
 	while (minasColocadas < buscaminas.get("NUM_BOMBAS")) {
 		let fila = numeroAleatorio(buscaminas.get("FILAS"))
@@ -36,6 +44,7 @@ function colocarBombasTableroJS() {
 	}
 }
 
+//Funcion para dibujar los divs en HTML, mediante grid
 function dibujarTableroHTML() {
 	if (!document.getElementById("idCelda_1_1")) {
 		let tablero = document.querySelector("#tablero")
@@ -49,12 +58,15 @@ function dibujarTableroHTML() {
 	}
 }
 
+
+//Funcion para añadir eventos por cada click
 function asociarEventClick(){
     let divs = document.querySelectorAll("div[id^=idCelda]");
     divs.forEach(e => e.addEventListener("click",mostrarCoordenadas))
     divs.forEach(e => e.addEventListener("contextmenu",ponerBandera))
 }
 
+//Funcino click izquierdo
 function mostrarCoordenadas(event) {
 	let coordenadas = event.target.id.split("_")
 	let x = coordenadas[1]
@@ -72,6 +84,8 @@ function mostrarCoordenadas(event) {
 	}
 	
 }
+
+//Funcion para calcular minas
 function calcularMinas(fila, columna) {
 	let numMinas = 0;
 	for (let f = fila-1; f <= fila+1; f++) {
@@ -86,6 +100,8 @@ function calcularMinas(fila, columna) {
 	return numMinas
 }
 
+
+//Funcion click derecho
 function ponerBandera(event) {
 	event.preventDefault()
 	if (event.target.innerHTML == "") {
@@ -95,6 +111,7 @@ function ponerBandera(event) {
 	}
 }
 
+//Funcion recursica
 function liberarRecursivo(x, y) {
 	let fila = parseInt(x)
 	let columna = parseInt(y)

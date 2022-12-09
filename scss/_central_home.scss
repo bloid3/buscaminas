@@ -1,4 +1,7 @@
-@import "colors";
+
+//Cuerpo de home
+
+@import "variables";
 main {
 	height: 700px;
 }
@@ -14,20 +17,11 @@ main {
 	border: 3px solid map-get($misColores, 'azuloscuro');
 	border-radius: 15px;
 }
-nav {
-	display: inline-block;
-	width: 23%;
-	margin-top: 43px;
-}
-button {
-	border: none;
-	background-color: map-get($misColores, 'naranjaclaro');
-	font-size:30px;
-	color:map-get($misColores, 'azulosclaro');
-	text-shadow:1px 1px 1px;
-}
 .img2 {
 	display: inline-block;
 	height: 30px;
 	width: 30px;
+}
+button:hover {
+	color: map-get($misColores, 'azuloscuro');
 }

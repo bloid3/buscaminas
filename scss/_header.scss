@@ -1,29 +1,40 @@
-@import "colors";
+@import "variables";
+
+//Encabezado
 
 .header {
-	display: block;
+	position: sticky;
 	height: 134px;
-	width: 100%;
+	width: 1870px;
 	text-align: center;
 	background-color: map-get($misColores, 'naranjaclaro');
 	border-radius: 40px;
 	border: 2px solid #264653;
+	top: 0;
 }
 
 nav {
-	display: inline-block;
-	width: 23%;
-	margin-top: 43px;
+	@include navs;
 }
 button {
 	border: none;
 	background-color: map-get($misColores, 'naranjaclaro');
-	font-size:30px;
+	font-size:27px;
 	color:map-get($misColores, 'azulclaro');
 	text-shadow:1px 1px 1px;
 }
-.img2 {
-	display: inline-block;
-	height: 30px;
-	width: 30px;
+
+$imagenes : ('home', 'user', 'play', 'help');
+
+@each $e in $imagenes {
+	.img-#{$e} {
+		@if $e == 'play' {
+			height: 30px;
+			width: 30px;
+		} @else{
+			height:27px;
+			width: 27px;
+		}
+		display: inline-block;
+	}
 }

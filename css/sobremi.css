@@ -8,17 +8,38 @@ body {
 }
 
 main {
-  height: 650px;
+  height: 700px;
 }
 
 .pie {
   position: fixed;
   width: 100%;
+  column-count: 4;
   bottom: 0;
-  margin-bottom: 30px;
 }
 
-.img1 {
+.img-1 {
+  text-align: center;
+  width: 24.5%;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.img-2 {
+  text-align: center;
+  width: 24.5%;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.img-3 {
+  text-align: center;
+  width: 24.5%;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.img-4 {
   text-align: center;
   width: 24.5%;
   display: inline-block;
@@ -26,43 +47,56 @@ main {
 }
 
 .header {
-  display: block;
+  position: sticky;
   height: 134px;
-  width: 100%;
+  width: 1870px;
   text-align: center;
   background-color: #f4a261;
   border-radius: 40px;
   border: 2px solid #264653;
+  top: 0;
 }
 
 nav {
   display: inline-block;
-  width: 23%;
+  width: 457.5px;
   margin-top: 43px;
 }
 
 button {
   border: none;
   background-color: #f4a261;
-  font-size: 30px;
+  font-size: 27px;
   color: #2a9d8f;
   text-shadow: 1px 1px 1px;
 }
 
-.img2 {
+.img-home {
+  height: 27px;
+  width: 27px;
   display: inline-block;
+}
+
+.img-user {
+  height: 27px;
+  width: 27px;
+  display: inline-block;
+}
+
+.img-play {
   height: 30px;
   width: 30px;
+  display: inline-block;
+}
+
+.img-help {
+  height: 27px;
+  width: 27px;
+  display: inline-block;
 }
 
 button:hover {
   color: #264653;
-}
-
-.img2 {
-  display: inline-block;
-  height: 30px;
-  width: 30px;
 }
 
 .afotodatos {

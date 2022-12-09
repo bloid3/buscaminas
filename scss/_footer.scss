@@ -1,12 +1,20 @@
+
+//Pie
+
 .pie {
 	position: fixed;
 	width: 100%;
-	bottom: 0;
-	margin-bottom: 30px;
+	column-count: 4;
+	bottom: 0;;
 }
-.img1 {
-	text-align: center;
+
+
+
+@for $i from 1 through 4 {
+	.img-#{$i} {
+		text-align: center;
 	width: 24.5%;
 	display: inline-block;
 	margin-top: 50px;
+	}
 }

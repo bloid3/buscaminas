@@ -1,0 +1,36 @@
+
+//Variables globales que usamos a lo largo del código
+
+
+///Este mapa de colores lo he usado para coger colores
+$misColores : (
+	'naranjaclaro': #f4a261,
+	'naranjaoscuro': #e76f51,
+	'azuloscuro' : #264653,
+	'azulclaro' : #2a9d8f,
+	'amarillo' : #e9c46a,
+);
+/// Mixin de los navs
+@mixin navs {
+	display: inline-block;
+	width: calcularTamanio(1870, 4);
+	margin-top: 43px;
+}
+
+///Mixin del borde de una celda
+@mixin borderCelda {
+	border-radius: 4px;
+	border-left: 2px solid black;
+	border-right: 2px solid grey;
+	border-top: 2px solid black;
+	border-bottom: 2px solid grey
+}
+
+//He creado la función calcularTamanio pero para el header, ya que con grid me es muy complicado
+
+
+///@param {number} $longitud
+///@param {numer} $numElem
+@function calcularTamanio($longitud, $numElem) {
+	@return calc($longitud/$numElem - 10) + px;
+}

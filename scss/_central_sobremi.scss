@@ -1,12 +1,9 @@
-@import "colors";
+@import "variables";
+
+//Cuerpo Sobre Mí
 
 button:hover {
 	color: map-get($misColores, 'azuloscuro');
-}
-.img2 {
-	display: inline-block;
-	height: 30px;
-	width: 30px;
 }
 .afotodatos {
 	height: 166px;

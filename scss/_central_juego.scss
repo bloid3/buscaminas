@@ -1,4 +1,7 @@
-@import "colors";
+
+//Cuerpo de juego
+
+@import "variables";
 
 #tablero {
 	display: grid;
@@ -8,12 +11,8 @@
 	place-content: center;
 }
 #tablero div {
-	border-radius: 4px;
+	@include borderCelda;
 	background-color: map-get($misColores, 'azuloscuro');
-	border-left: 2px solid black;
-	border-right: 2px solid grey;
-	border-top: 2px solid black;
-	border-bottom: 2px solid grey;
 }
 #tablero div:hover {
 	background-color:antiquewhite;
@@ -29,6 +28,7 @@ div[id^=idCelda] {
 	font-size: 35px;
 }
 
+//De aquí para abajo es código cogido de internet, pero es sólo un botón
 
 .play {
   background-color: map-get($misColores, 'azulclaro');

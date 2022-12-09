@@ -1,4 +1,7 @@
-@import "colors";
+
+//Archivo de sentencias generales
+
+@import "variables";
 * {
 	font-family: 'Air', sans-serif;
 }
@@ -7,5 +10,7 @@ body {
 	height: 100%;
 }
 main {
-	height: 650px;
+	height: 700px;
 }
+
+
