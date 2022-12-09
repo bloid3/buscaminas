@@ -1,63 +1,95 @@
 * {
-	font-family: 'Air', sans-serif;
+  font-family: "Air", sans-serif;
 }
+
 body {
-	background-color: #e76f51;
-	height: 100%;
+  background-color: #e76f51;
+  height: 100%;
 }
-.header {
-	display: block;
-	height: 134px;
-	width: 100%;
-	text-align: center;
-	background-color: #f4a261;
-	border-radius: 40px;
-	border: 2px solid #264653;
-}
+
 main {
-	height: 700px;
+  height: 650px;
 }
-.container {
-	position: relative;
-	height: 100%;
-}
-.container img {
-	position: absolute;
-	height: 98%;
-	margin-top: 0.7%;
-	left:21%;
-	border: 3px solid #264653;
-	border-radius: 15px;
-}
-nav {
-	display: inline-block;
-	width: 23%;
-	margin-top: 43px;
-}
-button {
-	border: none;
-	background-color: #f4a261;
-	font-size:30px;
-	color:#2a9d8f;
-	text-shadow:1px 1px 1px;
-}
-.img2 {
-	display: inline-block;
-	height: 30px;
-	width: 30px;
-}
+
 .pie {
-	position: fixed;
-	width: 100%;
-	bottom: 0;
-	margin-bottom: 30px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: 30px;
 }
+
 .img1 {
-	text-align: center;
-	width: 24.5%;
-	display: inline-block;
-	margin-top: 50px;
+  text-align: center;
+  width: 24.5%;
+  display: inline-block;
+  margin-top: 50px;
 }
-button:hover {
-	color: #264653;
+
+.header {
+  display: block;
+  height: 134px;
+  width: 100%;
+  text-align: center;
+  background-color: #f4a261;
+  border-radius: 40px;
+  border: 2px solid #264653;
 }
+
+nav {
+  display: inline-block;
+  width: 23%;
+  margin-top: 43px;
+}
+
+button {
+  border: none;
+  background-color: #f4a261;
+  font-size: 30px;
+  color: #2a9d8f;
+  text-shadow: 1px 1px 1px;
+}
+
+.img2 {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+main {
+  height: 700px;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+}
+
+.container img {
+  position: absolute;
+  height: 98%;
+  margin-top: 0.7%;
+  left: 21%;
+  border: 3px solid #264653;
+  border-radius: 15px;
+}
+
+nav {
+  display: inline-block;
+  width: 23%;
+  margin-top: 43px;
+}
+
+button {
+  border: none;
+  background-color: #f4a261;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px;
+}
+
+.img2 {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+/*# sourceMappingURL=home.css.map */

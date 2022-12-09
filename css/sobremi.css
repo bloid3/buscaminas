@@ -8,7 +8,7 @@ body {
 }
 
 main {
-  height: 700px;
+  height: 650px;
 }
 
 .pie {
@@ -97,7 +97,7 @@ button:hover {
 .acv {
   display: inline-block;
   background-color: #e9c46a;
-  height: 580px;
+  height: 500px;
   margin-top: 15px;
   width: 49%;
   border-radius: 40px;
@@ -118,14 +118,14 @@ button:hover {
 
 .lado {
   display: inline-block;
-  height: 580px;
+  height: 500px;
   width: 49%;
   margin-left: 23px;
 }
 
 .aficiones {
   background-color: #e9c46a;
-  height: 270px;
+  height: 230px;
   width: 100%;
   border-radius: 40px;
   border: 2px solid;
@@ -133,7 +133,7 @@ button:hover {
 
 .porfolio {
   background-color: #e9c46a;
-  height: 270px;
+  height: 230px;
   width: 100%;
   border-radius: 40px;
   margin-top: 29px;
